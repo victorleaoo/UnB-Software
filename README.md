@@ -28,7 +28,7 @@ Referencio um repositório com a Engenharia Reversa do aplicativo do YouTube com
 
 Foi feito um trabalho escrito acerca da qualidade de software do site do DETRAN-DF no que concerne deficientes.
 
-## Compiladores
+## [Compiladores](https://github.com/victorleaoo/UnB-Software/tree/main/COMP)
 
 Para um trabalho da disciplina de Compiladores foi feito um simulador de compilador com flex.
 
@@ -92,7 +92,7 @@ I reference a repository with Reverse Engineering of the YouTube app, focusing o
 
 A written work was done on the quality of the software on the DETRAN-DF website with regard to disabled people.
 
-## Compilers
+## [Compilers](https://github.com/victorleaoo/UnB-Software/tree/main/COMP)
 
 For a work in the Compilers discipline, a compiler simulator was made with flex.
 
