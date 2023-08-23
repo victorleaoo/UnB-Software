@@ -4,7 +4,7 @@
 
 Durante a disciplina de Orientação a Objetos houve o desenvolvimento de um projeto, em Java, simulando uma loja de tênis, com o intuito do aprendizado dos fundamentos do paradigma. Também houve o estudo de UML e requisitos iniciais.
 
-## Estruturas de Dados 1 e 2
+## [Estruturas de Dados 1 e 2](https://github.com/victorleaoo/UnB-Software/tree/main/EDA1_2_DS)
 
 As disciplinas de Estruturas de Dados 1 e 2 foram repletas de exercícios para o estudo das estruturas.
 
@@ -24,7 +24,7 @@ Ambas as disciplinas de Sistemas de Bancos de Dados foram repletas de exercício
 
 Referencio um repositório com a Engenharia Reversa do aplicativo do YouTube com foco em requisitos. Tive uma grande atuação no desenvolvimento dessa documentação.
 
-## Qualidade de Software
+## [Qualidade de Software](https://github.com/victorleaoo/UnB-Software/tree/main/QUAL)
 
 Foi feito um trabalho escrito acerca da qualidade de software do site do DETRAN-DF no que concerne deficientes.
 
@@ -68,7 +68,7 @@ Foram feitos 3 trabalhos ao longo do semestre abordando diferentes estudos de si
 
 During the Object Orientation course, a project was developed in Java, simulating a shoes store, with the aim of learning the fundamentals of the paradigm. There was also the study of UML and initial requirements.
 
-## Data Structures
+## [Data Structures](https://github.com/victorleaoo/UnB-Software/tree/main/EDA1_2_DS)
 
 Data Structures courses were full of exercises for studying structures.
 
@@ -88,7 +88,7 @@ Both disciplines of Database Systems were full of exercises and assignments for 
 
 I reference a repository with Reverse Engineering of the YouTube app, focusing on requirements. I had a great role in the development of this documentation.
 
-## Software Quality
+## [Software Quality](https://github.com/victorleaoo/UnB-Software/tree/main/QUAL)
 
 A written work was done on the quality of the software on the DETRAN-DF website with regard to disabled people.
 
