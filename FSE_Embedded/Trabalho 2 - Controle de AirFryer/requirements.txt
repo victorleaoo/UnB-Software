@@ -1,0 +1,4 @@
+RPi.GPIO
+smbus
+bmp280
+serial
