@@ -1,0 +1,51 @@
+	.data
+str1:   .space 80
+str2:   .space 80
+	
+	.text
+main:	li $v0, 5 # Lê inteiro
+	syscall
+	move $s0, $v0 # Salva o primeiro número (numero de questoes)
+	
+   	la      $s2,str1 # String 1 será salva em s2
+    	move    $t2,$s2  # Carregada em t2 para a função
+    	jal     getstr	 # Função para ler string chamada
+
+    	la      $s3,str2 # String 2 será salva em s3
+    	move    $t2,$s3  # Carregada em t2 para a função
+    	jal     getstr	 # Função para ler string chamada
+    	
+    	addi $s5, $s5, 0  # contador do loop
+   	addi $s4, $s4, 0  # contador de questões corretas
+    	
+cmploop:
+    	lb      $t2,($s2) # pega caracter da primeira string
+    	lb      $t3,($s3) # pega caracter da segunda string
+
+    	beq     $t2,$t3,soma # se os caracteres forem igual, soma um ao numero de questoes corretas
+volta:	
+    	addi    $s2,$s2,1 # vai para o proximo caracter da primeira string
+    	addi    $s3,$s3,1 # vai para o proximo caracter da segunda string
+    	
+    	addi    $s5,$s5,1 # somador do contador++
+
+	slt $t0, $s5, $s0 # t0 = 1 se o contador < quantidade de questoes
+	beq $t0, 1, cmploop # sai do loop quando s5 >= s0
+	
+	li $v0, 1 # Imprimir inteiro (numero de questoes corretas)
+	move $a0, $s4
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+getstr: # Função de leitura de string
+    	li      $v0,8 # Lê string
+	li      $a1,80  # Tamanho de 80
+   	move    $a0,$t2 # Endereço da string
+    	syscall
+    	jr      $ra # retorno
+    	
+soma:	# Soma de questões corretas
+	addi $s4, $s4, 1
+	j volta # Volta para o loop

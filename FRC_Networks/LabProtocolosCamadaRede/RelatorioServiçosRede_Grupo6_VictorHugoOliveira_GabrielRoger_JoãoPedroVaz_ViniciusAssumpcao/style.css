@@ -1,0 +1,32 @@
+.alunos{
+    text-align: center;
+}
+
+.item{
+    text-align: center;
+}
+
+.father{
+    background-color: floralwhite;
+}
+
+.cabecalho{
+    text-align: center;
+}
+
+IMG.displayed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px; 
+}
+
+.thanks{
+    text-align: center;
+}
+
+IMG.displayed2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}

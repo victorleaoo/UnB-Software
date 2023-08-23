@@ -1,0 +1,64 @@
+	.data
+inv: 	.asciiz "Entrada invalida."
+pula: 	.asciiz "\n"
+
+	.text
+main:	li $v0, 5 # Le inteiro
+	syscall
+	move $t0, $v0 # Salva inteiro em t0
+	
+	li $v0, 5 # Le inteiro
+	syscall
+	move $t1, $v0 # Salva inteiro em t1
+	
+	slti $t2, $t0, 2 # Vê se o número 1 é maior que 1 ou não
+	beq $t2, 1, inval # Se o número for menor ou igual que 1, ele é inválido
+	
+	slti $t2, $t1, 2 # Vê se o número 2 é maior que 1 ou não
+	beq $t2, 1, inval # Se o número for menor ou igual que 1, ele é inválido
+	
+	add $s0, $t0, $zero # numero 1 para usar no loop de mdc
+	add $s1, $t1, $zero # numero 1 para usar no loop de mdc
+mdc:	div $s0, $s1 # divide os dois numeros
+	mfhi $t3 # salva o resto da divisão acima
+	add $s0, $s1, $zero # numero 1 = numero 2
+	add $s1, $t3, $zero # numero 2 = resto
+	beq $t3, $zero, pmdc # Se o resto for igual a 0, imprime mdc
+	
+	b mdc # se nao for o mdc, volta pro loop
+	
+pmdc:	li $v0, 1 # Imprimir inteiro
+	move $a0, $s0 # Imprime o primeiro numero (que no caso vira o mdc no loop)
+	syscall
+	
+	li $v0, 4   
+	la $a0, pula # Syscall para pular linha
+	syscall
+	
+	add $t4, $t0, $zero # nova var = numero 1
+	add $t5, $t1, $zero # nova var 2 = numero 2
+	
+mmc: 	div $t4, $t5 # divide os numeros 
+	mfhi $t3 # salva o resto da divisao acima
+	add $t4, $t5, $zero # nova var = nova var 2
+	add $t5, $t3, $zero # nova var 2 = resto
+	beq $t3, $zero, pmmc # quando o resto for igual a 0, imprime mmc
+	
+	b mmc
+	
+pmmc:	mul $t6, $t0, $t1 # multiplica num 1 e num 2 
+	div $t7, $t6, $t4 # divide a multiplicacao pela nova var
+	
+	li $v0, 1 # Imprimir inteiro
+	move $a0, $t7 # Imprime o primeiro numero (que no caso vira o mdc no loop)
+	syscall
+	
+	b saida
+	
+inval:	li $v0, 4   
+	la $a0, inv # Syscall para imprimir "Entrada invalida."
+	syscall
+	b saida
+	
+saida:	li $v0, 10 # return 0
+	syscall

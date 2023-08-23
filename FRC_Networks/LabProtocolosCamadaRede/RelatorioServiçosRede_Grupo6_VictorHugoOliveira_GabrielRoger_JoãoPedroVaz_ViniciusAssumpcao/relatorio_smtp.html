@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Relatório de Configuração SMTP - JVGV </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="father">
+    <img src="imagens/empresa.jpg" height='600' weight='600' class="displayed">
+    <h1> Relatório para o Laboratório SMTP </h1>
+    <hr>
+    <h2> Passos para execução </h2>
+    <p>
+    <ol type='I'>
+        <li>Inicialmente, é necessário instalar o pacote postfix: $ sudo apt-get install postfix </li>
+        <li>Assim, com ele instalado, pode-se começar a configuração com as seguintes entradas para as etapas:</li>
+        &emsp;Ok<br>
+        &emsp;Internet Site<br>
+        &emsp;NONE<br>
+        &emsp;mail.jvgv.com<br>
+        &emsp;mail.jvgv.com, localhost.jvgv, localhost<br>
+        &emsp;No<br>
+        &emsp;127.0.0.0/28, 192.168.10.0/24<br>
+        &emsp;Yes<br>
+        &emsp;0<br>
+        &emsp;+<br>
+        &emsp;all<br>
+        <li>É interessante dar um reload no serviço: $ systemctl reload postfix</li>
+        <li>Com isso, é possível iniciar o serviço postfix: $ /etc/init.d/postfix start</li>
+        <li>Adiciona-se os usuários da rede: $ adduser 192.168.10.50 </li>
+        <li>Então, é possível enviar um e-mail para usuários cadastrados: $ mail -v 192.168.10.50@jvgv.com </li>
+        <li>Por fim, para verificar se o e-mail chegou, o comando a seguir mostra o arquivo criado quando um e-mail é
+            chegado com sucesso: $ cat /var/mail/192.168.10.50 </li>
+    </ol>
+</body>
+
+</html>

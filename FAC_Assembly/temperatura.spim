@@ -1,0 +1,129 @@
+	.data
+buffer: .space 20
+constk: .double 273.15
+constf: .double 1.8
+const32:.double 32.0
+const5: .double 5.0
+const9: .double 9.0
+	
+	.text
+main: 	li $v0, 8 # Lê string
+	la $a0, buffer # buffer de space
+	li $a1, 3 # espaço para a string
+	syscall
+	move $t0, $a0 # salvar string em t0
+	
+	lb $t1, ($t0) # Salva o primeiro caracter em t1
+	
+	li $v0, 8 # Lê string
+	la $a0, buffer # buffer de space
+	li $a1, 3 # espaço para a string
+	syscall
+	move $t2, $a0 # salvar string em s1
+	
+	lb $t3, ($t2) # Salva o primeiro caracter em t3
+	
+	li $v0, 7 # Lê double -> está salvo em f0/f1
+	syscall
+	
+	li $t4, 'C' # salva C em t4
+	li $t5, 'K' # salva K em t5
+	li $t6, 'F' # salva F em t6
+	
+	beq $t1, $t4, cto # Se a primeira temp for igual a C vai para CTO
+	beq $t1, $t5, kto # Se a primeira temp for igual a K vai para KTO
+	beq $t1, $t6, fto # Se a primeira temp for igual a F vai para FTO
+		
+	li $v0, 10 # Return 0
+	syscall
+
+cto:	beq $t3, $t5, ctok # Se for C + K irá para ctok
+	beq $t3, $t6, ctof # Se for C + F irá para ctof
+
+ctok:	l.d $f10, constk # salva em f0 273.15
+	add.d $f2, $f0, $f10 # soma 273.15 para passar de C para K
+
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f2
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+ctof:	l.d $f10, constf # salva em f0 1.8
+	l.d $f14, const32 # salva em f14 32.0
+	mul.d $f2, $f0, $f10 # celsius * 1.8 
+	add.d $f4, $f2, $f14 # soma 32 para converter
+	
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f4
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+kto:	beq $t3, $t4, ktoc # Se for K + C irá para ktoc
+	beq $t3, $t6, ktof # Se for K + F irá para ktof
+
+ktoc:	l.d $f10, constk # salva em f0 273.15
+	sub.d $f2, $f0, $f10 # diminui 273.15 para passar de K para C
+
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f2
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+ktof:	l.d $f20, constk # salva em f0 273.15 -> CONVERTER PARA CELSIUS PARA DEPOIS FAZER A CONVERSÃO PARA F
+	sub.d $f2, $f0, $f20 # diminui 273.15 para passar de K para C
+
+	l.d $f10, constf # salva em f0 1.8
+	l.d $f14, const32 # salva em f14 32.0
+	mul.d $f4, $f2, $f10 # celsius * 1.8 
+	add.d $f6, $f4, $f14 # soma 32 para converter
+	
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f6
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+fto:	beq $t3, $t4, ftoc # Se for F + C irá para ftoc
+	beq $t3, $t5, ftok # Se for F + K irá para ftok
+	
+ftoc:	l.d $f8, const5
+	l.d $f10, const9
+	l.d $f16, const32
+	
+	div.d $f18, $f8, $f10 # Divide 5 por 9
+	sub.d $f30, $f0, $f16 # Diminui 32 da temperatura
+	
+	mul.d $f2, $f30, $f18 # sub * 5/9 = C
+	
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f2
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall
+	
+ftok:	l.d $f8, const5
+	l.d $f10, const9
+	l.d $f16, const32
+	l.d $f14, constk
+	
+	div.d $f18, $f8, $f10 # Divide 5 por 9
+	sub.d $f30, $f0, $f16 # Diminui 32 da temperatura
+	
+	mul.d $f2, $f30, $f18 # sub * 5/9 = C
+	
+	add.d $f2, $f2, $f14 # Soma 273,15 para converter para kelvin
+	
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f2
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall

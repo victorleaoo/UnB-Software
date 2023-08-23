@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Relatório de Configuração DHCP - JVGV </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="father">
+    <img src="imagens/empresa.jpg" height='600' weight='600' class="displayed">
+    <h1> Relatório para o Laboratório DHCP </h1>
+    <hr>
+    <h2> Passos para execução </h2>
+    <p>
+    <ol type='I'>
+        <li>Primeiramente, é necessário instalar o servidor DHCP: sudo apt-get install isc-dhcp-server -y </li>
+        <li>Em seguida, deve-se configurar o DHCP server no arquivo presente em: /etc/dhcp3/dhcpd.conf </li>
+        <li>As mudanças importantes a serem feitas são: </li>
+        &emsp;option domain-name "www.jvgv.com";<br>
+        &emsp;option domain-name-serves 192.168.10.2;<br>
+        &emsp;subnet 192.168.10.0 netmask 255.255.255.0{<br>
+        &emsp;&emsp;range 192.168.10.50 192.168.10.100;<br>
+        &emsp;&emsp;option routers 192.168.10.2;<br>
+        &emsp;}<br>
+        <li>Com isso, é possível inicializar o DHCP server: /etc/init.d/isc-dhcp-server start </li>
+        <li>É possível verificar os logs do DHCP com o seguinte comando: tail -f /var/log/syslog </li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+	.data
+sim:	.asciiz "sim"
+nao:	.asciiz "nao"
+inv: 	.asciiz "Entrada invalida."
+
+	.text
+main:	li $v0, 5 # Le inteiro
+	syscall
+	move $t0, $v0 # Salva inteiro em t0
+	beq $t0, 1, nprimo # Se o valor for igual a 1 é não.
+	beq $t0, 2, primo # Se o valor for igual a 2 é sim.
+	beq $t0, 3, primo # Se o valor for igual a 3 é sim.
+	
+	slti $t1, $t0, 1 # Vê se o número é maior que 1 ou não
+	beq $t1, 1, inval # Se o número for menor que 1, ele é inválido
+	
+vPar:	li $t6, 2 # Verificar par
+	div $t0, $t6
+	mfhi $t7 # salva o resto da divisão acima
+	beq $t7, $zero, nprimo
+	
+	li $t2, 3 # Primeiro numero primo que deverá ser usado para checar os outros
+	
+check:	mul $t4, $t2, $t2
+	slt $t5, $t4, $t0 # Roda até t4 <= num
+	beq $t5, $zero, primo # Fim do loop, logo, se não saiu, o número é primo
+	div $t0, $t2 # verifica se o numero é divisível pelo checador
+	mfhi $t3 # salva o resto da divisão acima
+	beq $t3, $zero, nprimo # se o resto da divisão for igual a 0, não é primo, porque seria um divisor.
+	addi $t2, $t2, 2 # soma um ao checador
+	
+	b check # continua o loop
+	
+primo:	li $v0, 4   # Se for primo
+	la $a0, sim # Syscall para imprimir "sim"
+	syscall
+	b saida
+	
+nprimo:	li $v0, 4   # Se não for primo
+	la $a0, nao # Syscall para imprimir "nao"
+	syscall
+	b saida
+
+inval:	li $v0, 4   
+	la $a0, inv # Syscall para imprimir "Entrada invalida."
+	syscall
+	b saida
+	
+saida:	li $v0, 10 # return 0
+	syscall

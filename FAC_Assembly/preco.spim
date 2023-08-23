@@ -1,0 +1,39 @@
+	.data
+const100: .double 100.0
+	
+	.text
+main:	li $v0, 7 # Lê double -> está salvo em f0/f1
+	syscall
+	
+	li $v0, 5 # Lê inteiro
+	syscall
+	move $t1, $v0 # Salva o inteiro em t1 (porcentagem de lucro) 
+	
+	mtc1.d $t1, $f16 # Convertendo para double e salva em f16/f17
+  	cvt.d.w $f16, $f16
+  	
+  	l.d $f10, const100 # Para poder dividir as porcentagens por 100
+  	
+  	div.d $f16, $f16, $f10 # Porcentagem de lucro/100
+	
+	li $v0, 5 # Lê inteiro
+	syscall
+	move $t2, $v0 # Salva o inteiro em t2 (porcentagem de imposto) 
+	
+	mtc1.d $t2, $f20 # Convertendo para double e salva em f20/f21
+  	cvt.d.w $f20, $f20
+  	
+  	div.d $f20, $f20, $f10 # Porcentagem de imposto/100
+	
+	mul.d $f30, $f0, $f16 # Porcentagem de lucro
+	mul.d $f4, $f0, $f20 # Porcentagem de imposto
+	
+	add.d $f0, $f30, $f0 # Porcentagem de lucro + custo
+	add.d $f0, $f4, $f0 # Porcentagem de lucro + custo + porcentagem de imposto
+	
+	li $v0, 3 # Imprimir double
+	mov.d $f12, $f0
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall

@@ -1,0 +1,10 @@
+	.data
+str1:	.asciiz "Ola Mundo"
+
+	.text
+main:	li $v0, 4    # Syscall para imprimir string
+	la $a0, str1 # Syscall para imprimir string
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall

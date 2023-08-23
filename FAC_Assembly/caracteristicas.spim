@@ -1,0 +1,144 @@
+	.data
+addd:	.asciiz "ADD: "
+subb:	.asciiz "SUB: "
+linha: 	.asciiz "\n"
+andd:   .asciiz "AND: "
+orr:    .asciiz "OR: "
+xorr:   .asciiz "XOR: "
+mask: 	.asciiz "MASK: "
+sll1: 	.asciiz "SLL("
+slrl:   .asciiz "): "
+srl1: 	.asciiz "SRL("
+
+	.text
+main:	li $v0, 5 # Lê inteiro
+	syscall
+	move $t0, $v0 # Salva inteiro 1
+	
+	li $v0, 5 # Lê inteiro
+	syscall
+	move $t1, $v0 # Salva inteiro 2
+	
+	li $v0, 5 # Lê inteiro
+	syscall
+	move $t2, $v0 # Salva inteiro 3
+	
+	add $s0, $t0, $t1 # Somar os dois primeiros números
+	sub $s1, $t0, $t1 # Subtrair os dois primeiros números
+	and $s2, $t0, $t1 # And dos dois primeiros números
+	or  $s3, $t0, $t1 # Or dos dois primeiros números
+	xor $s4, $t0, $t1 # Xor dos dois primeiros números
+	and $s5, $t2, 31  # Mask
+	sllv $s6, $t0, $s5 # Deslocamento m à esquerda de a
+	srlv $s7, $t1, $s5 # Deslocamento m à direita de b
+	
+	li $v0, 4  
+	la $a0, addd # Syscall para imprimir string "ADD: "
+	syscall
+	
+	li $v0, 1 # Imprimir soma
+	move $a0, $s0
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, subb # Syscall para imprimir "SUB: "
+	syscall
+	
+	li $v0, 1 # Imprimir subtração
+	move $a0, $s1
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, andd # Syscall para imprimir "AND: "
+	syscall
+	
+	li $v0, 1 # Imprimir AND
+	move $a0, $s2
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, orr # Syscall para imprimir "OR: "
+	syscall
+	
+	li $v0, 1 # Imprimir OR
+	move $a0, $s3
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, xorr # Syscall para imprimir "XOR: "
+	syscall
+	
+	li $v0, 1 # Imprimir XOR
+	move $a0, $s4
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, mask # Syscall para imprimir "MASK: "
+	syscall
+	
+	li $v0, 1 # Imprimir MASK
+	move $a0, $s5
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, sll1 # Syscall para imprimir "SLL( "
+	syscall
+	
+	li $v0, 1 # Imprimir MASK
+	move $a0, $s5
+	syscall
+	
+	li $v0, 4   
+	la $a0, slrl # Syscall para imprimir "): "
+	syscall
+	
+	li $v0, 1 # Imprimir SLL
+	move $a0, $s6
+	syscall
+	
+	li $v0, 4    
+	la $a0, linha # Syscall para pular linha
+	syscall
+	
+	li $v0, 4   
+	la $a0, srl1 # Syscall para imprimir "SRL( "
+	syscall
+	
+	li $v0, 1 # Imprimir MASK
+	move $a0, $s5
+	syscall
+	
+	li $v0, 4   
+	la $a0, slrl # Syscall para imprimir "): "
+	syscall
+	
+	li $v0, 1 # Imprimir SRL4
+	move $a0, $s7
+	syscall
+	
+	li $v0, 10 # Return 0
+	syscall

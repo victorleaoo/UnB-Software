@@ -1,0 +1,49 @@
+	.data
+str:	.space 120
+
+	.text
+main:	li $v0, 5 # Lê tamanho string (inteiro)
+	syscall
+	move $s0, $v0 # Salva em s0 o tamanho da string
+	
+	li $v0, 8 # lê a string a ser analisada
+	la $a0, str # string vai ser armazenada em str
+	la $a1, 120 # tamanho inicial = 120
+	syscall
+	move $s1, $a0 # armazena str em s1
+	
+	add $s2, $s2, $zero # contador em s2
+	move $t2, $s0 # salvar em t0 o tamanho da string
+	li $t3, 1 # t1 manipulará a string do final ao início
+	sub $t2, $t2, $t3 
+	
+Palind: # loop para checar se a palavra é um palindromo
+	beq $s2, $s0, sim # Se o contador já rodar a palavra toda e não tiver terminado o programa, é pq é um palindromo, logo vai imprimir 1 em "sim"
+	
+	lb $t0, ($s1) # começa a string da esquerda pra direita
+	lb $t1, str($t2) # começa a string da direita pra esquerda
+	
+	bne $t0, $t1, nao # se os caracteres nao forem iguais, vai imprimir 0
+	# se nao, continua
+	addi $s1, $s1, 1 # vai pular para o proximo char da esquerda pra direita
+	sub $t2, $t2, $t3 # vai pular para o proximo char da direita pra esquerda
+	
+	addi $s2, $s2, 1 # soma um no contador
+	j Palind # continua a comparação
+	
+sim:	# imprimir 1 e return 0
+	addi $t4, $t4, 1
+	li $v0, 1 # imprimir int
+	move $a0, $t4 # vai imprimir um
+	syscall
+	
+	li $v0, 10 # return 0
+	syscall
+	
+nao: 	# imprimir 0 e return 0
+	li $v0, 1 # imprimir int
+	move $a0, $zero # vai imprimir zero
+	syscall
+	
+	li $v0, 10 # return 0
+	syscall

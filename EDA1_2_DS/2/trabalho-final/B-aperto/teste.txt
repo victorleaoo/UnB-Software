@@ -1,0 +1,14 @@
+alex eda
+5 7
+alex
+barbara
+carlos
+duda
+eda
+alex carlos
+barbara eda
+alex duda
+barbara alex
+eda duda
+duda barbara
+carlos duda

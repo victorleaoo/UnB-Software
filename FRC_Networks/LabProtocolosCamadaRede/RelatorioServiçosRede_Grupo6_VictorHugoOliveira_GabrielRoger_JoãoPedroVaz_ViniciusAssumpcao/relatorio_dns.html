@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Relatório de Configuração DNS - JVGV </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="father">
+    <img src="imagens/empresa.jpg" height='600' weight='600' class="displayed">
+    <h1> Relatório para o Laboratório DNS </h1>
+    <hr>
+    <h2> Passos para execução </h2>
+    <p>
+    <ol type='I'>
+        <li>Adiciona-se, inicialmente, no arquivo /etc/hosts a tradução do endereço e nome: 192.168.10.2 jvgv.com </li>
+        <li>Então, para a configuração do DNS no cliente propriamente dito, inicia-se alterando o arquivo
+            /etc/resolv.conf, adicionando: </li>
+        &emsp;domain jvgv.com<br>
+        &emsp;nameserver 192.168.10.2<br>
+        <li>Para o servidor, então, começa-se por instalar o DNS: $ sudo apt install bind9 </li>
+        <li>Com isso, altera-se o arquivo /etc/bind/named.conf.local (DNS padrão e reverso) para definir as zonas: </li>
+        &emsp;zone "jvgv.com" in{<br>
+        &emsp;&emsp;type master;<br>
+        &emsp;&emsp;file "/etc/bind/db.jvgv";<br>
+        &emsp;};<br>
+        &emsp;zone "10.168.192.in-addr.arpa" in {<br>
+        &emsp;&emsp;type master;<br>
+        &emsp;&emsp;file "/etc/bind/db.gvjv";<br>
+        &emsp;};<br>
+        <li>Assim, é necessário fazer os arquivos para cada zona master (db.jvgv): </li>
+        &emsp;@ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;IN&emsp; SOA gabriel.jvgv.com. root.gabriel.jvgv.com. (<br>
+        &emsp;&emsp;&emsp;20232901<br>
+        &emsp;&emsp;&emsp;21600<br>
+        &emsp;&emsp;&emsp;1800<br>
+        &emsp;&emsp;&emsp;6048000<br>
+        &emsp;&emsp;&emsp;86400 )<br>
+        &emsp;&emsp;jvgv.com. IN MX 10 192.168.10.2.jvgv.com<br>
+        &emsp;&emsp;localhost IN A 127.0.0.1<br>
+        &emsp;&emsp;gabriel IN A 192.168.10.50<br>
+        <li>Também para o reverso (db.gvjv): </li>
+        &emsp;@ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;IN SOA gabriel.jvgv.com. root.gabriel.jvgv.com. (<br>
+        &emsp;&emsp;&emsp;20232901<br>
+        &emsp;&emsp;&emsp;21600<br>
+        &emsp;&emsp;&emsp;1800<br>
+        &emsp;&emsp;&emsp;6048000<br>
+        &emsp;&emsp;&emsp;86400 )<br>
+        &emsp;&emsp;2 IN PTR jvgv.com.<br>
+        &emsp;&emsp;50 IN PTR gabriel.jvgv.com.<br>
+        <li>Com os arquivos configurados, é necessário iniciar o servidor DNS: # sudo /etc/init.d/bind9 start </li>
+        <li>Diversas consultas, então, podem ser realizadas para conferir o funcionamento do DNS </li>
+    </ol>
+</body>
+
+</html>
