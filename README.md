@@ -1,6 +1,6 @@
 # Estudos e Trabalhos - Engenharia de Software (UnB: Universidade de Brasília)
 
-## Orientação a Objetos
+## [Orientação a Objetos](https://github.com/victorleaoo/UnB-Software/tree/main/OO_ObjOriented)
 
 Durante a disciplina de Orientação a Objetos houve o desenvolvimento de um projeto, em Java, simulando uma loja de tênis, com o intuito do aprendizado dos fundamentos do paradigma. Também houve o estudo de UML e requisitos iniciais.
 
@@ -8,15 +8,15 @@ Durante a disciplina de Orientação a Objetos houve o desenvolvimento de um pro
 
 As disciplinas de Estruturas de Dados 1 e 2 foram repletas de exercícios para o estudo das estruturas.
 
-## Fundamentos de Arquitetura de Computadores
+## [Fundamentos de Arquitetura de Computadores](https://github.com/victorleaoo/UnB-Software/tree/main/FAC_Assembly)
 
 Nessa disciplina, o maior aprendizado que tive prático foi o desenvolvimento de exercícios na linguagem Assembly (MIPS).
 
-## Fundamentos de Sistemas Operacionais
+## [Fundamentos de Sistemas Operacionais](https://github.com/victorleaoo/UnB-Software/tree/main/FSO_OpSys)
 
 Para a disciplina de Fundamentos de Sistemas Operacionais foram feitos exercícios para entendimento do funcionamento "interno" do sistema operacional Linux.
 
-## Sistemas de Bancos de Dados 1 e 2
+## [Sistemas de Bancos de Dados 1 e 2](https://github.com/victorleaoo/UnB-Software/tree/main/SDB_DB)
 
 Ambas as disciplinas de Sistemas de Bancos de Dados foram repletas de exercícios e trabalhos para práticas dos estudos teóricos (diagramas e modelos) e de linguagem SQL. Faça o download do arquivo rar para ter acesso aos conteúdos dessas disciplinas.
 
@@ -36,7 +36,7 @@ Para um trabalho da disciplina de Compiladores foi feito um simulador de compila
 
 Nessa disciplina foi desenvolvido um produto simples de software para restaurantes (menu) com enfoque na diagramação e padrões de projeto. Tive contribuição no backend da aplicação e na documentação como um todo.
 
-## Fundamentos de Redes de Computadores
+## [Fundamentos de Redes de Computadores](https://github.com/victorleaoo/UnB-Software/tree/main/FRC_Networks)
 
 Durante a disciplina, fiz diversos trabalhos e documentos relacionados a redes de computadores.
 
@@ -58,13 +58,13 @@ Foram feitos 3 trabalhos ao longo do semestre para exercitar diferentes paradigm
 1. [Lógico](https://github.com/UnBParadigmas2023-1-Turma02/2023.1_G2_Logico_OptaSoftware)
 1. [Sistema Multi-Agentes](https://github.com/UnBParadigmas2023-1-Turma02/2023.1_G2_SMA_SimuladorDoenca)
 
-## Fundamentos de Sistemas Embarcados
+## [Fundamentos de Sistemas Embarcados](https://github.com/victorleaoo/UnB-Software/tree/main/FSE_Embedded)
 
 Foram feitos 3 trabalhos ao longo do semestre abordando diferentes estudos de sistemas embarcados.
 
 # Studies and Assignments - Software Engineering (UnB: University of Brasilia)
 
-## Object Oriented
+## [Object Oriented](https://github.com/victorleaoo/UnB-Software/tree/main/OO_ObjOriented)
 
 During the Object Orientation course, a project was developed in Java, simulating a shoes store, with the aim of learning the fundamentals of the paradigm. There was also the study of UML and initial requirements.
 
@@ -72,17 +72,17 @@ During the Object Orientation course, a project was developed in Java, simulatin
 
 Data Structures courses were full of exercises for studying structures.
 
-## Fundamentals of Computer Architecture
+## [Fundamentals of Computer Architecture](https://github.com/victorleaoo/UnB-Software/tree/main/FAC_Assembly)
 
 In this course, the greatest practical learning experience was the development of exercises in Assembly language (MIPS).
 
-## Fundamentals of Operating Systems
+## [Fundamentals of Operating Systems](https://github.com/victorleaoo/UnB-Software/tree/main/FSO_OpSys)
 
 For the Fundamentals of Operating Systems course, exercises were made to understand the "internal" functioning of the Linux operating system.
 
-## Database Systems
+## [Database Systems](https://github.com/victorleaoo/UnB-Software/tree/main/SDB_DB)
 
-Both disciplines of Database Systems were full of exercises and assignments for practices of theoretical studies (diagrams and models) and of SQL language.
+Both disciplines of Database Systems were full of exercises and assignments for practices of theoretical studies (diagrams and models) and of SQL language. Download the rar file to access the contents of these disciplines.
 
 ## [Software Requirements](https://github.com/Requisitos-de-Software/2022.1-Youtube)
 
@@ -100,7 +100,7 @@ For a work in the Compilers discipline, a compiler simulator was made with flex.
 
 In this course, a simple software product for restaurants (menu) was developed, focusing on diagrams and design patterns. I had works on the backend of the application and on the documentation as a whole.
 
-## Fundamentals of Computer Networks
+## [Fundamentals of Computer Networks](https://github.com/victorleaoo/UnB-Software/tree/main/FRC_Networks)
 
 During the course, I did several works and documents related to computer networks.
 
@@ -122,6 +122,6 @@ During the course, I did several works and documents related to computer network
 1. [Logic](https://github.com/UnBParadigmas2023-1-Turma02/2023.1_G2_Logico_OptaSoftware)
 1. [Multi-agent System](https://github.com/UnBParadigmas2023-1-Turma02/2023.1_G2_SMA_SimuladorDoenca)
 
-## Fundamentals of Embedded Systems
+## [Fundamentals of Embedded Systems](https://github.com/victorleaoo/UnB-Software/tree/main/FSE_Embedded)
 
 3 assignments were done throughout the semester addressing different studies of embedded systems.
