@@ -8,6 +8,10 @@ Durante a disciplina de Orientação a Objetos houve o desenvolvimento de um pro
 
 As disciplinas de Estruturas de Dados 1 e 2 foram repletas de exercícios para o estudo das estruturas.
 
+## [Métodos de Desenvolvimento de Software](https://github.com/FGAUnB-MDS-GM/2021.2-SoftFit)
+
+Foi criado um projeto para academias com Django (primeiro contato com essa tecnologia). O projeto tem vários furos e melhorias, mas me lembra de como me evoluí.
+
 ## [Fundamentos de Arquitetura de Computadores](https://github.com/victorleaoo/UnB-Software/tree/main/FAC_Assembly)
 
 Nessa disciplina, o maior aprendizado que tive prático foi o desenvolvimento de exercícios na linguagem Assembly (MIPS).
@@ -71,6 +75,10 @@ During the Object Orientation course, a project was developed in Java, simulatin
 ## [Data Structures](https://github.com/victorleaoo/UnB-Software/tree/main/EDA1_2_DS)
 
 Data Structures courses were full of exercises for studying structures.
+
+## [Software Development Methods](https://github.com/FGAUnB-MDS-GM/2021.2-SoftFit)
+
+A project was created for gyms with Django (first contact with this technology). The project has several holes and improvements, but it reminds me of how I evolved.
 
 ## [Fundamentals of Computer Architecture](https://github.com/victorleaoo/UnB-Software/tree/main/FAC_Assembly)
 
