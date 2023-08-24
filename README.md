@@ -18,7 +18,7 @@ Para a disciplina de Fundamentos de Sistemas Operacionais foram feitos exercíci
 
 ## Sistemas de Bancos de Dados 1 e 2
 
-Ambas as disciplinas de Sistemas de Bancos de Dados foram repletas de exercícios e trabalhos para práticas dos estudos teóricos (diagramas e modelos) e de linguagem SQL.
+Ambas as disciplinas de Sistemas de Bancos de Dados foram repletas de exercícios e trabalhos para práticas dos estudos teóricos (diagramas e modelos) e de linguagem SQL. Faça o download do arquivo rar para ter acesso aos conteúdos dessas disciplinas.
 
 ## [Requisitos de Software](https://github.com/Requisitos-de-Software/2022.1-Youtube)
 
