@@ -13,4 +13,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents = discord.Intents.all())
-client.run('MTE4NDk5NjEzNDQ5MDQ3NjU2NA.GXfIQ1.00m1UPsPGYg_SL5pZkbG8BAMgX_c1hzRFkcS0k')
+client.run('key')
