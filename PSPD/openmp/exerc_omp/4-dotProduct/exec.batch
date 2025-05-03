@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=erad-2020-4 		#Nome do job
+#SBATCH --time=10:00         		#Tempo máximo do job
+#SBATCH --partition=shared   		#Fila a ser utilizada
+#SBATCH --cpus-per-task=8    		#Numero de threads
+#SBATCH --reservation=workshop_45	#Nome da reserva
+
+#Exibe os nós alocados para o Job
+echo "Running on $SLURM_JOB_NODELIST"
+
+printf "\nCompilando\n"
+make
+
+printf "\nExecutando\n"
+./src/4-dot-product.exec 10

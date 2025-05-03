@@ -24,10 +24,6 @@ Para a disciplina de Fundamentos de Sistemas Operacionais foram feitos exercíci
 
 Ambas as disciplinas de Sistemas de Bancos de Dados foram repletas de exercícios e trabalhos para práticas dos estudos teóricos (diagramas e modelos) e de linguagem SQL. Faça o download do arquivo rar para ter acesso aos conteúdos dessas disciplinas.
 
-## [Requisitos de Software](https://github.com/Requisitos-de-Software/2022.1-Youtube)
-
-Referencio um repositório com a Engenharia Reversa do aplicativo do YouTube com foco em requisitos. Tive uma grande atuação no desenvolvimento dessa documentação.
-
 ## [Qualidade de Software](https://github.com/victorleaoo/UnB-Software/tree/main/QUAL)
 
 Foi feito um trabalho escrito acerca da qualidade de software do site do DETRAN-DF no que concerne deficientes.
@@ -66,6 +62,43 @@ Foram feitos 3 trabalhos ao longo do semestre para exercitar diferentes paradigm
 
 Foram feitos 3 trabalhos ao longo do semestre abordando diferentes estudos de sistemas embarcados.
 
+## [Técnicas de Programação em Plataformas Emergentes](https://github.com/victorleaoo/UnB-Software/tree/main/TPPE_TDD)
+
+Foi feito um trabalho que desenvolve algumas funções em Python baseadas nos princípios do TDD (Test-Driven Development).
+
+## [Programação para Sistemas Paralelos e Distribuídos](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD)
+
+Alguns projetos e exercícios foram desenvolvidos relacionado a programação em sistemas de forma paralelo e distribuída:
+
+- [bot_discord](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/bot_discord): implementação de leitura de mensagens de um canal no discord e criação de WordCloud em streaming com Kafka.
+- [hadoop_cluster](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/hadoop_cluster): simulação de um cluster com HDFS pelo uso de Docker.
+- [gpu](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/gpu): exercícios de programação usando a GPU para tarefas paralelas.
+- [openmp](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/openmp): exercícios de programação usando OpenMPs.
+
+## Engenharia de Produto de Software
+
+Foram desenvolvidas evoluções no software da "UnbTV", uma plataforma com conteúdos visuais sobre a Universidade e outros temas que venham a interessar a comunidade acadêmica. As principais evoluções foram relacionadas a um sistema de recomendação e, também, apresentações analíticas dos dados da "UnBTV" para os administradores do sistema.
+
+Durante todo o semestre, foram trabalhados documentações, juntamente com o desenvolvimento do Software:
+
+- [UnB-TV DOC](https://github.com/fga-eps-mds/2024.1-UnB-TV-DOC/tree/main): Repositório para armazenar a documentação do projeto.
+- [UnB-TV FrontEnd](https://github.com/fga-eps-mds/2024.1-UnB-TV-Frontend): Frontend do projeto, desenvolvido em Angular.
+- [UnB-TV Users](https://github.com/fga-eps-mds/2024.1-UnB-TV-Users): módulo de usuários do projeto, desenvolvido em FastApi.
+- [UnB-TV Admin](https://github.com/fga-eps-mds/2024.1-UnB-TV-Admin): módulo de administrador do projeto, desenvolvido em FastApi.
+- [UnB-TV VideoService](https://github.com/fga-eps-mds/2024.1-UnB-TV-VideoService): módulo de serviço de vídeos do projeto, desenvolvido em FastApi.
+
+## Projeto Integrador de Engenharia
+
+Foi desenvolvido um trabalho que une várias engenharias: Aeroespacial, Automotiva, Eletrônica, Energia e Software. O intuito foi construir uma plataforma de limpeza de placas solares.
+
+Para a parte de software foi construído um aplicativo para controle remoto da plataforma e, também, foi necessário desenvolver um sistema embarcado com uma ESP32 para funcionamento da plataforma como esperado.
+
+Todos os repositórios do projeto podem ser encontrados em [Grupo 04 - Helios CW1](https://gitlab.com/unb-esw/fga-pi2/semestre-2024-1/grupo-05).
+
+## [Trabalho de Conclusão de Curso - TCC](https://github.com/victorleaoo/UnB-Software/tree/main/TCC)
+
+O tema do TCC é "Camada de Gestão do Sistema Inteligente de Avaliação do Conhecimento - Módulo de Testes do SAE" e foi apresentado e aprovado em 2024/2.
+
 # Studies and Assignments - Software Engineering (UnB: University of Brasilia)
 
 ## [Object Oriented](https://github.com/victorleaoo/UnB-Software/tree/main/OO_ObjOriented)
@@ -91,10 +124,6 @@ For the Fundamentals of Operating Systems course, exercises were made to underst
 ## [Database Systems](https://github.com/victorleaoo/UnB-Software/tree/main/SDB_DB)
 
 Both disciplines of Database Systems were full of exercises and assignments for practices of theoretical studies (diagrams and models) and of SQL language. Download the rar file to access the contents of these disciplines.
-
-## [Software Requirements](https://github.com/Requisitos-de-Software/2022.1-Youtube)
-
-I reference a repository with Reverse Engineering of the YouTube app, focusing on requirements. I had a great role in the development of this documentation.
 
 ## [Software Quality](https://github.com/victorleaoo/UnB-Software/tree/main/QUAL)
 
@@ -133,3 +162,40 @@ During the course, I did several works and documents related to computer network
 ## [Fundamentals of Embedded Systems](https://github.com/victorleaoo/UnB-Software/tree/main/FSE_Embedded)
 
 3 assignments were done throughout the semester addressing different studies of embedded systems.
+
+## [Techniques for Programming on Emerging Platforms](https://github.com/victorleaoo/UnB-Software/tree/main/TPPE_TDD)
+
+A short project was developed that implements some Python functions based on the principles of TDD (Test-Driven Development).
+
+## [Programming for Parallel and Distributed Systems](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD)
+
+Some projects and exercises were developed related to programming in parallel and distributed systems:
+
+- [bot_discord](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/bot_discord): implementation of reading messages from a Discord channel and creating a WordCloud in streaming with Kafka.
+- [hadoop_cluster](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/hadoop_cluster): simulation of a cluster with HDFS using Docker.
+- [gpu](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/gpu): programming exercises using the GPU for parallel tasks.
+- [openmp](https://github.com/victorleaoo/UnB-Software/tree/main/PSPD/openmp): programming exercises using OpenMP.
+
+## Software Product Engineering
+
+Improvements were made to the "UnbTV" software, a platform with visual content about the University and other topics of interest to the academic community. The main improvements were related to a recommendation system and analytical presentations of "UnBTV" data for system administrators.
+
+Throughout the semester, documentation was worked on alongside software development:
+
+- [UnB-TV DOC](https://github.com/fga-eps-mds/2024.1-UnB-TV-DOC/tree/main): Repository to store the project's documentation.
+- [UnB-TV FrontEnd](https://github.com/fga-eps-mds/2024.1-UnB-TV-Frontend): Frontend of the project, developed in Angular.
+- [UnB-TV Users](https://github.com/fga-eps-mds/2024.1-UnB-TV-Users): User module of the project, developed in FastAPI.
+- [UnB-TV Admin](https://github.com/fga-eps-mds/2024.1-UnB-TV-Admin): Administrator module of the project, developed in FastAPI.
+- [UnB-TV VideoService](https://github.com/fga-eps-mds/2024.1-UnB-TV-VideoService): Video service module of the project, developed in FastAPI.
+
+## Engineering Capstone Project
+
+A project was developed that integrates various engineering fields: Aerospace, Automotive, Electronics, Energy, and Software. The goal was to build a solar panel cleaning platform.
+
+For the software component, an application was created for remote control of the platform, and it was also necessary to develop an embedded system using an ESP32 to ensure the platform functioned as expected.
+
+All project repositories can be found at [Group 04 - Helios CW1](https://gitlab.com/unb-esw/fga-pi2/semestre-2024-1/grupo-05).
+
+## [Thesis - TCC](https://github.com/victorleaoo/UnB-Software/tree/main/TCC)
+
+The theme of the TCC is "Management Layer of the Sistema Inteligente de Avaliação do Conhecimento - SAE Testing Module" and it was presented and approved in 2024/2.
